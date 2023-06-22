@@ -1,0 +1,13 @@
+dependency_overrides:
+  astro_types:
+    git: https://github.com/enspyrco/astro_types
+  firebase_auth_service_interface:
+    git: https://github.com/enspyrco/firebase_auth_service_interface
+  enspyr_lints:
+    git: https://github.com/enspyrco/enspyr_lints
+
+# dependency_overrides:
+#   astro_types:
+#     path: ../../../../flutter/utils/astro_types
+#   firebase_auth_service_interface:
+#     path: ../../../../dart/interfaces/firebase_auth_service_interface

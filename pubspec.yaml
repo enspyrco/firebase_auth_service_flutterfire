@@ -1,0 +1,21 @@
+name: firebase_auth_service_flutterfire
+description: A Firebase Auth service, implementing firebase_auth_service_interface by wrapping Flutterfire's firebase_auth plugin.
+version: 0.0.0-a1
+publish_to: none
+
+environment:
+  sdk: '>=3.0.1 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  firebase_auth: ^4.6.3
+  astro_types: ^0.0.0-a1
+  firebase_auth_service_interface: ^0.0.0-a1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  enspyr_lints: ^0.0.0-a1
