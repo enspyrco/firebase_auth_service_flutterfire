@@ -1,6 +1,6 @@
 library firebase_auth_service_flutterfire;
 
-import 'package:astro_types/auth_types.dart';
+import 'package:types_for_perception/auth_types.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_auth_service_interface/firebase_auth_service_interface.dart';
 

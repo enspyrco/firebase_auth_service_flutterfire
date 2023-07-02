@@ -11,7 +11,7 @@
 Each implementor of `firebase_auth_service_interface` supplies an
 implementation of AuthState & UserAuthState.
 
-The AuthState & UserAuthState interfaces live in `astro_types` as
+The AuthState & UserAuthState interfaces live in `types_for_perception` as
 `astro_auth` is a core plugin.
 
 ## Features

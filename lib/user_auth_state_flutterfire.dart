@@ -1,5 +1,5 @@
-import 'package:astro_types/auth_types.dart';
-import 'package:astro_types/state_types.dart';
+import 'package:types_for_perception/auth_types.dart';
+import 'package:types_for_perception/state_types.dart';
 
 class UserAuthStateFlutterfire implements UserAuthState, AstroState {
   const UserAuthStateFlutterfire({
