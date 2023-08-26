@@ -1,8 +1,8 @@
 library firebase_auth_service_flutterfire;
 
-import 'package:types_for_perception/auth_types.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_auth_service_interface/firebase_auth_service_interface.dart';
+import 'package:types_for_auth/types_for_auth.dart';
 
 import 'user_auth_state_flutterfire.dart';
 import 'user_extension.dart';
@@ -14,7 +14,7 @@ class FirebaseAuthServiceFlutterfire implements FirebaseAuthService {
   final FirebaseAuth _plugin;
 
   @override
-  Future<String>? getCurrentIdToken() {
+  Future<String?>? getCurrentIdToken() {
     return _plugin.currentUser?.getIdToken();
   }
 

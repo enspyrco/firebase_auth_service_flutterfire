@@ -1,10 +1,10 @@
-import 'package:types_for_perception/auth_types.dart';
-import 'package:types_for_perception/json_types.dart';
-import 'package:types_for_perception/state_types.dart';
+import 'package:json_utils/json_utils.dart';
+import 'package:types_for_perception/auth_beliefs.dart';
+import 'package:types_for_perception/beliefs.dart';
 
 import 'user_auth_state_flutterfire.dart';
 
-class AuthStateFlutterfire implements AuthState, AstroState {
+class AuthStateFlutterfire implements AuthBeliefs, CoreBeliefs {
   const AuthStateFlutterfire({this.user = const UserAuthStateFlutterfire()});
 
   @override

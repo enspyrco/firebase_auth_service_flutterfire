@@ -1,13 +1,13 @@
 dependency_overrides:
-  types_for_perception:
-    git: https://github.com/enspyrco/types_for_perception
-  firebase_auth_service_interface:
-    git: https://github.com/enspyrco/firebase_auth_service_interface
-  enspyr_lints:
-    git: https://github.com/enspyrco/enspyr_lints
+# where are we? flutter/utils/flutterfire/<here>
+  # types_for_perception:
+  #   path: ../../perception/types_for_perception
+  # firebase_auth_service_interface:
+  #   path: ../../../../dart/interfaces/firebase_auth_service_interface
 
-# dependency_overrides:
-#   types_for_perception:
-#     path: ../../../../flutter/utils/types_for_perception
-#   firebase_auth_service_interface:
-#     path: ../../../../dart/interfaces/firebase_auth_service_interface
+  # enspyr_lints:
+  #   path: 
+  # types_for_auth:
+  #   path: 
+  # json_utils:
+  #   path: 

@@ -1,7 +1,7 @@
-import 'package:types_for_perception/auth_types.dart';
-import 'package:types_for_perception/state_types.dart';
+import 'package:types_for_auth/types_for_auth.dart';
+import 'package:types_for_perception/beliefs.dart';
 
-class UserAuthStateFlutterfire implements UserAuthState, AstroState {
+class UserAuthStateFlutterfire implements UserAuthState, CoreBeliefs {
   const UserAuthStateFlutterfire({
     this.signedIn = SignedInState.checking,
     this.uid,

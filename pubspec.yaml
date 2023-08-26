@@ -4,7 +4,7 @@ version: 0.0.0-a1
 publish_to: none
 
 environment:
-  sdk: '>=3.0.1 <4.0.0'
+  sdk: '>=3.0.0 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
@@ -12,10 +12,18 @@ dependencies:
     sdk: flutter
   
   firebase_auth: ^4.6.3
-  types_for_perception: ^0.0.0-a1
-  firebase_auth_service_interface: ^0.0.0-a1
+  types_for_perception:
+    git: https://github.com/enspyrco/types_for_perception
+  firebase_auth_service_interface:
+    git: https://github.com/enspyrco/firebase_auth_service_interface
+
+  json_utils:
+    git: https://github.com/enspyrco/json_utils
+  types_for_auth:
+    git: https://github.com/enspyrco/types_for_auth
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  enspyr_lints: ^0.0.0-a1
+  enspyr_lints:
+    git: https://github.com/enspyrco/enspyr_lints
