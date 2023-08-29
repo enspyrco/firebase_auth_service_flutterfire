@@ -1,14 +1,14 @@
-library firebase_auth_service_flutterfire;
+library flutterfire_firebase_auth_service;
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_auth_service_interface/firebase_auth_service_interface.dart';
 import 'package:types_for_auth/types_for_auth.dart';
 
-import 'user_auth_state_flutterfire.dart';
+import 'flutterfire_user_auth_belief.dart';
 import 'user_extension.dart';
 
-class FirebaseAuthServiceFlutterfire implements FirebaseAuthService {
-  FirebaseAuthServiceFlutterfire({FirebaseAuth? plugin})
+class FlutterfireFirebaseAuthService implements FirebaseAuthService {
+  FlutterfireFirebaseAuthService({FirebaseAuth? plugin})
       : _plugin = plugin ?? FirebaseAuth.instance;
 
   final FirebaseAuth _plugin;
@@ -32,8 +32,8 @@ class FirebaseAuthServiceFlutterfire implements FirebaseAuthService {
   }
 
   @override
-  Stream<UserAuthStateFlutterfire> get onAuthStateChange {
-    return _plugin.authStateChanges().map((user) => user.toState());
+  Stream<FlutterfireUserAuthBelief> get onAuthStateChange {
+    return _plugin.authStateChanges().map((user) => user.toBelief());
   }
 
   @override
@@ -50,7 +50,7 @@ class FirebaseAuthServiceFlutterfire implements FirebaseAuthService {
     UserCredential credential =
         await _plugin.signInWithCredential(oauthCredential);
 
-    return credential.user.toState();
+    return credential.user.toBelief();
   }
 
   @override
@@ -64,7 +64,7 @@ class FirebaseAuthServiceFlutterfire implements FirebaseAuthService {
     final userCredential =
         await FirebaseAuth.instance.signInWithCredential(oauthCredential);
 
-    return userCredential.user.toState();
+    return userCredential.user.toBelief();
   }
 
   @override
@@ -72,7 +72,7 @@ class FirebaseAuthServiceFlutterfire implements FirebaseAuthService {
     final userCredential = await _plugin.signInAnonymously();
     final firebaseAuthUser = userCredential.user!;
 
-    return firebaseAuthUser.toState();
+    return firebaseAuthUser.toBelief();
   }
 
   @override
@@ -80,7 +80,7 @@ class FirebaseAuthServiceFlutterfire implements FirebaseAuthService {
       String email, String password) async {
     final credential = await _plugin.signInWithEmailAndPassword(
         email: email, password: password);
-    return credential.user.toState();
+    return credential.user.toBelief();
   }
 
   @override
@@ -88,7 +88,7 @@ class FirebaseAuthServiceFlutterfire implements FirebaseAuthService {
       String email, String password) async {
     final credential = await _plugin.createUserWithEmailAndPassword(
         email: email, password: password);
-    return credential.user.toState();
+    return credential.user.toBelief();
   }
 
   @override
@@ -105,7 +105,7 @@ class FirebaseAuthServiceFlutterfire implements FirebaseAuthService {
     final user = FirebaseAuth.instance.currentUser!;
     final userCredential = await user.linkWithCredential(authCredential);
 
-    return userCredential.user.toState();
+    return userCredential.user.toBelief();
   }
 
   @override
@@ -122,6 +122,6 @@ class FirebaseAuthServiceFlutterfire implements FirebaseAuthService {
     UserCredential credential =
         await _plugin.signInWithCredential(oauthCredential);
 
-    return credential.user.toState();
+    return credential.user.toBelief();
   }
 }

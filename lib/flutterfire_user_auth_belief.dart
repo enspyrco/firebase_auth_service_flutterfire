@@ -1,8 +1,8 @@
 import 'package:types_for_auth/types_for_auth.dart';
-import 'package:types_for_perception/beliefs.dart';
+import 'package:abstractions/beliefs.dart';
 
-class UserAuthStateFlutterfire implements UserAuthState, CoreBeliefs {
-  const UserAuthStateFlutterfire({
+class FlutterfireUserAuthBelief implements UserAuthState, CoreBeliefs {
+  const FlutterfireUserAuthBelief({
     this.signedIn = SignedInState.checking,
     this.uid,
     this.displayName,
@@ -19,13 +19,13 @@ class UserAuthStateFlutterfire implements UserAuthState, CoreBeliefs {
   final String? photoURL;
 
   @override
-  UserAuthStateFlutterfire copyWith({
+  FlutterfireUserAuthBelief copyWith({
     SignedInState? signedIn,
     String? uid,
     String? displayName,
     String? photoURL,
   }) {
-    return UserAuthStateFlutterfire(
+    return FlutterfireUserAuthBelief(
       signedIn: signedIn ?? this.signedIn,
       uid: uid ?? this.uid,
       displayName: displayName ?? this.displayName,
@@ -43,7 +43,7 @@ class UserAuthStateFlutterfire implements UserAuthState, CoreBeliefs {
 
   @override
   bool operator ==(Object other) =>
-      other is UserAuthStateFlutterfire &&
+      other is FlutterfireUserAuthBelief &&
       other.signedIn == signedIn &&
       other.uid == uid &&
       other.displayName == displayName &&

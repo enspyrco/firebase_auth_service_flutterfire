@@ -1,4 +1,4 @@
-# firebase_auth_service_flutterfire
+# flutterfire_firebase_auth_service
 
 *A Firebase Auth service, implementing firebase_auth_service_interface by wrapping Flutterfire's firebase_auth plugin.*
 
@@ -11,7 +11,7 @@
 Each implementor of `firebase_auth_service_interface` supplies an
 implementation of AuthState & UserAuthState.
 
-The AuthState & UserAuthState interfaces live in `types_for_perception` as
+The AuthState & UserAuthState interfaces live in `abstractions` as
 `astro_auth` is a core plugin.
 
 ## Features

@@ -1,4 +1,4 @@
-name: firebase_auth_service_flutterfire
+name: flutterfire_firebase_auth_service
 description: A Firebase Auth service, implementing firebase_auth_service_interface by wrapping Flutterfire's firebase_auth plugin.
 version: 0.0.0-a1
 publish_to: none
@@ -12,8 +12,10 @@ dependencies:
     sdk: flutter
   
   firebase_auth: ^4.6.3
-  types_for_perception:
-    git: https://github.com/enspyrco/types_for_perception
+  abstractions:
+    git: https://github.com/enspyrco/abstractions
+
+  # auth
   firebase_auth_service_interface:
     git: https://github.com/enspyrco/firebase_auth_service_interface
 
